@@ -56,7 +56,8 @@
 		};
 		pmi8950_charger: qcom,qpnp-smbcharger {
 			qcom,iterm-ma = <200>;
-			qcom,float-voltage-mv = <4380>;
+			qcom,fastchg-current-ma = <3400>;
+			qcom,float-voltage-mv = <4500>;
 			qcom,resume-delta-mv = <50>;
 			/delete-property/ qcom,rparasitic-uohm;
 			qcom,rparasitics-uohm = <100000>;
