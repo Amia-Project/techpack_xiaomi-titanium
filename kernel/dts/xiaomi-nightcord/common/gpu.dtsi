@@ -14,8 +14,6 @@
 &clock_gcc_gfx {
 	qcom,gfxfreq-corner =
 		 <         0   0 >,
-		 < 320000000   3 >,  /* SVS       */
-		 < 400000000   4 >,  /* SVS Plus  */
 		 < 510000000   5 >,  /* NOM       */
 		 < 560000000   6 >,  /* Nom Plus  */
 		 < 650000000   7 >,  /* Turbo     */
@@ -71,26 +69,8 @@
 			qcom,bus-max = <10>;
 		};
 
-		/* SVS+ */
-		qcom,gpu-pwrlevel@4 {
-			reg = <4>;
-			qcom,gpu-freq = <400000000>;
-			qcom,bus-freq = <7>;
-			qcom,bus-min = <5>;
-			qcom,bus-max = <8>;
-		};
-
-		/* SVS */
-		qcom,gpu-pwrlevel@5 {
-			reg = <5>;
-			qcom,gpu-freq = <320000000>;
-			qcom,bus-freq = <4>;
-			qcom,bus-min = <2>;
-			qcom,bus-max = <6>;
-		};
-
 		/* XO */
-		qcom,gpu-pwrlevel@6 {
+		qcom,gpu-pwrlevel@4 {
 			reg = <6>;
 			qcom,gpu-freq = <19200000>;
 			qcom,bus-freq = <0>;
