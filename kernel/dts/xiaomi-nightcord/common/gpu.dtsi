@@ -24,7 +24,7 @@
 &msm_gpu {
 
 	qcom,ca-target-pwrlevel = <3>;
-	qcom,initial-pwrlevel = <7>;
+	qcom,initial-pwrlevel = <0>;
 	/delete-node/qcom,gpu-pwrlevels;
 
 	/* Power levels */
@@ -67,15 +67,6 @@
 			qcom,bus-freq = <9>;
 			qcom,bus-min = <6>;
 			qcom,bus-max = <10>;
-		};
-
-		/* XO */
-		qcom,gpu-pwrlevel@4 {
-			reg = <6>;
-			qcom,gpu-freq = <19200000>;
-			qcom,bus-freq = <0>;
-			qcom,bus-min = <0>;
-			qcom,bus-max = <0>;
 		};
 	};
 };
