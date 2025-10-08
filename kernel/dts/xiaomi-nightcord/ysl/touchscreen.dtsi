@@ -17,18 +17,26 @@
                 pinctrl-3 = <&ts_as_reset>;
                 pinctrl-4 = <&ts_reset_suspend>;
                 pinctrl-5 = <&ts_reset_active>;
-		goodix,family-id = <0x09>;
-		goodix,product-id = "9111";
-		goodix,reset-gpio = <&tlmm 64 0x00>;
-		//goodix,power_ldo-gpio = <&tlmm 0 0x00>;
-		goodix,irq-gpio = <&tlmm 65 0x00>;
-		goodix,display-coords = <0 720 0 1440>;
-		goodix,panel-coords = <0 720 0 1440>;
-		//goodix,button-map = <158 102 139>;
-		//goodix,fw-auto-update;
-		//goodix,force-update;
-		goodix,i2c-pull-up;
-		goodix,dbl_clk_wakeup;
+		reset-gpio = <&tlmm 64 0x00>;
+		irq-gpio = <&tlmm 65 0x00>;
+		irq-flags = <1>;
+		touchscreen-max-id = <10>;
+		touchscreen-size-x = <720>;
+		touchscreen-size-y = <1440>;
+		touchscreen-max-w = <1024>;
+		touchscreen-max-p = <1024>;
+		goodix,type-a-report = <0>;
+		goodix,driver-send-cfg = <1>;
+		goodix,wakeup-with-reset = <0>;
+		goodix,resume-in-workqueue = <1>;
+		goodix,int-sync = <1>;
+		goodix,swap-x2y = <0>;
+		goodix,esd-protect = <1>;
+		goodix,pen-suppress-finger = <0>;
+		goodix,auto-update = <1>;
+		goodix,auto-update-cfg = <0>;
+		goodix,power-off-sleep = <0>;
+		goodix,slide-wakeup = <1>;
 		goodix,cfg-group0 = [
                      52 D0 02 A0 05 0A 3C 10 11 5A 37
                      0F 5A 46 08 62 00 00 00 00 12 13
